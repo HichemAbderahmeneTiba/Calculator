@@ -2,6 +2,7 @@ const ac = document.querySelector(".ac");
 const del = document.querySelector(".del");
 const btn = document.querySelectorAll(".btn");
 const write = document.querySelector(".operating textarea");
+const equal = document.querySelector(".equal");
 
 let content = "";
 let symbol = "";
@@ -28,6 +29,14 @@ btn.forEach((button) => {
     console.log(symbol);
     write.value = content;
   });
+});
+
+equal.addEventListener("click", function () {
+  if ((write.value = eval(write.value))) {
+    write.value = eval(write.value);
+  } else {
+    write.value = "Error";
+  }
 });
 
 console.log(btn);
