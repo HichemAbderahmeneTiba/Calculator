@@ -23,8 +23,9 @@ del.addEventListener("click", deleteLastCharactere);
 
 btn.forEach((button) => {
   button.addEventListener("click", function () {
-    Symbol = button.textContent;
+    symbol = button.textContent;
     content += symbol;
+    console.log(symbol);
     write.value = content;
   });
 });
