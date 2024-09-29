@@ -18,25 +18,25 @@ const deleteLastCharactere = function () {
   write.value = content;
 };
 
+function clac() {
+  if ((write.value = eval(write.value))) {
+    write.value = eval(write.value);
+    content = write.value;
+  } else {
+    write.value = "Error";
+  }
+}
+
 ac.addEventListener("click", clear);
 
 del.addEventListener("click", deleteLastCharactere);
+
+equal.addEventListener("click", clac);
 
 btn.forEach((button) => {
   button.addEventListener("click", function () {
     symbol = button.textContent;
     content += symbol;
-    console.log(symbol);
     write.value = content;
   });
 });
-
-equal.addEventListener("click", function () {
-  if ((write.value = eval(write.value))) {
-    write.value = eval(write.value);
-  } else {
-    write.value = "Error";
-  }
-});
-
-console.log(btn);
